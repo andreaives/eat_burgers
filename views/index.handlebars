@@ -1,36 +1,34 @@
-<h1>EAT IT!</h1>
 
-<h2>Consume da burger!</h2>
+<h1>Welcome to good burger! Home of the good burger!</h1>
 
+
+<h2>Can I take your order?</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca"></label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+
+  <button type="submit">Make it snappy</button>
+</form>
+
+<h2>Order up!</h2>
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
-      {{>burger-block devour=true}}
+    {{#unless devour}}
+      {{>burgers/burger-block devour=0}}
     {{/unless}}
   {{/each}}
 </ul>
 
 <ul>
   {{#each burgers}}
-    {{#if devoured}}
-      {{>burger-block devour=false}}
+    {{#if devour}}
+      {{>burgers/burger-block devour= 1}}
     {{/if}}
   {{/each}}
-</ul>
+</ul>    
 
-<h2>Add a burger</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="devour">Devour?</label><br>
-    <input type="radio" name="devour" value="1" checked> Devour!<br>
-    <input type="radio" name="devour" value="0"> Devoured!
-  </div>
-
-  <button type="submit">Order Burger</button>
-</form>

@@ -24,9 +24,10 @@ $(function() {
    event.preventDefault();
 
    var newBurgersMade = {
-     name: $("#ca").val().trim(),
-     devour: $("[name=devour]:checked").val().trim()
+     name: $("#ca").val().trim()
    };
+
+   console.log(newBurgersMade)
 
    // Post request
    $.ajax("/api/burgers", {
