@@ -1,21 +1,23 @@
-
-<h1>Welcome to good burger! Home of the good burger!</h1>
-
-
+<div class="jumbotron text-center">
+<h1>Welcome to Good Burger, home of the Good Burger!</h1>
 <h2>Can I take your order?</h2>
-<form class="create-form">
+<form class="create-form content">
 
   <div class="form-group">
     <label for="ca"></label>
     <input type="text" id="ca" name="name">
   </div>
 
-
-  <button type="submit">Make it snappy</button>
+  <button type="button submit" class="btn btn-dark">please (: </button>
 </form>
 
-<h2>Order up!</h2>
-<ul>
+
+</div>
+
+
+
+<h2 class="content">Order up!</h2>
+<ul class="content">
   {{#each burgers}}
     {{#unless devour}}
       {{>burgers/burger-block devour=0}}
@@ -23,7 +25,7 @@
   {{/each}}
 </ul>
 
-<ul>
+<ul class="content">
   {{#each burgers}}
     {{#if devour}}
       {{>burgers/burger-block devour= 1}}
